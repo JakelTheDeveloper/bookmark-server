@@ -4,3 +4,10 @@
 {"message":"Unauthorized request to path: ${req.path}","level":"error"}
 {"message":"Unauthorized request to path: ${req.path}","level":"error"}
 {"message":"Unauthorized request to path: ${req.path}","level":"error"}
+{"message":"Unauthorized request to path: ${req.path}","level":"error"}
+{"message":"Bookmark with id 6ff not found.","level":"error"}
+{"message":"Bookmark with id 1ac1649a-a35c-4621-9361-1cd0eb78b443 created","level":"info"}
+{"message":"Bookmark with id d3363bf1-c3b9-4725-9e27-d02adc9bf42e created","level":"info"}
+{"message":"Bookmark with id ty not found.","level":"error"}
+{"message":"Unauthorized request to path: ${req.path}","level":"error"}
+{"message":"Bookmark with id x56w deleted.","level":"info"}
