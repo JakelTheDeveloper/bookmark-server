@@ -1,7 +1,6 @@
 const express = require('express')
 const { v4: uuid } = require('uuid')
 const bookmarkRouter = express.Router()
-// const { isWebUri } = require('valid-url')
 const bodyParser = express.json()
 const logger = require('../logger')
 const { bookmarks } = require('../store')
@@ -21,7 +20,7 @@ bookmarkRouter
                 .status(400)
                 .send('Invalid data');
         }
-        if (!isWebUri(url)) {
+        if (!url) {
             logger.error(`Invalid url '${url}' supplied`)
             return res.status(400).send(`'url' must be a valid URL`)
           }
@@ -46,7 +45,8 @@ bookmarkRouter
             title,
             rating,
             url,
-            description
+            description,
+            expanded:false
         };
 
         bookmarks.push(bookmark);
@@ -101,7 +101,7 @@ bookmarkRouter
         const { id } = req.params;
         const bookmark = bookmarks.find(b => b.id == id);
 
-        // make sure we found a card
+        // bookmark exists?
         if (!bookmark) {
             logger.error(`Bookmark with id ${id} not found.`);
             return res
