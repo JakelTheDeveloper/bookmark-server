@@ -17,3 +17,6 @@
 {"message":"Bookmark with id x56w not found.","level":"error"}
 {"message":"Bookmark with id 33b47fc5-771a-4cab-9566-c05dad606d60 created","level":"info"}
 {"message":"Bookmark with id 75fb84e5-d348-47e1-9fb3-08d89ba2a12b created","level":"info"}
+{"message":"Unauthorized request to path: ${req.path}","level":"error"}
+{"message":"Bookmark with id x56w deleted.","level":"info"}
+{"message":"Bookmark with id 146d43b0-a3ac-458f-9eb0-45b58791ce65 created","level":"info"}

@@ -18,7 +18,7 @@ bookmarkRouter
             logger.error(`Title is required`);
             return res
                 .status(400)
-                .send('Invalid data');
+                .send('Please enter a title');
         }
         if (!url) {
             logger.error(`Invalid url '${url}' supplied`)
@@ -29,12 +29,12 @@ bookmarkRouter
             logger.error(`description is required`);
             return res
                 .status(400)
-                .send('Invalid data');
+                .send('Must provide a description');
         }
 
         if (!Number.isInteger(rating) || rating < 0 || rating > 5) {
             logger.error(`Invalid rating '${rating}' supplied`)
-            return res.status(400).send(`'rating' must be a number between 0 and 5`)
+            return res.status(400).send(`'Rating' must be a number between 0 and 5`)
           }
 
 
@@ -61,7 +61,7 @@ bookmarkRouter
 
     //Delete
     bookmarkRouter
-    .route('/bookmark/:id')
+    .route('/bookmarks/:id')
     .get((req, res) => {
       const { id } = req.params
   
@@ -96,7 +96,7 @@ bookmarkRouter
     })
 
 bookmarkRouter
-    .route('/bookmark/:id')
+    .route('/bookmarks/:id')
     .get((req, res) => {
         const { id } = req.params;
         const bookmark = bookmarks.find(b => b.id == id);
